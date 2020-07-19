@@ -16,13 +16,12 @@ class Main(Cog_Extension):
 
     @commands.command()
     async def em(self, ctx):
-        embed=discord.Embed(title="Join my discord club!", url="https://cdn.discordapp.com/attachments/605290629383192587/729622102302392400/68102556_p0_master1200.png", color=0x5900ff, 
+        embed=discord.Embed(title="加入我的群組!", url="https://cdn.discordapp.com/attachments/605290629383192587/729622102302392400/68102556_p0_master1200.png", color=0x5900ff, 
         timestamp=datetime.datetime.utcnow())
         embed.set_author(name="ㄏ ㄏ#7516", url="https://discord.gg/x7qrbPJ", icon_url="https://cdn.discordapp.com/attachments/605290629383192587/729622102302392400/68102556_p0_master1200.png")
         embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/605290629383192587/729622102302392400/68102556_p0_master1200.png")
-        embed.add_field(name="1", value="3", inline=True)
-        embed.add_field(name="2", value="4", inline=True)
-        embed.set_footer(text="5")
+        embed.add_field(name="開發DC Bot中", value="價格親民", inline=True)
+        embed.add_field(name="接受自訂機器人", value="可以私下談", inline=True)
         await ctx.send(embed=embed)
 
 #--------------訊息複誦、清理訊息--------------#

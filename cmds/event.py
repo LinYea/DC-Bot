@@ -26,6 +26,22 @@ class Event(Cog_Extension):
         if msg.content in keyword and msg.author !=  self.bot.user:
             await msg.channel.send('apple')
 
+#----------指令錯誤/例外狀況處理---------#
+
+    @commands.Cog.listener()
+    async def on_command_error(self, ctx, error):
+        if hasattr(ctx.command, 'on_error'):
+            return
+
+        if isinstance(error.commands.errors.MissingRequiredArgument):
+            await ctx.send("參數錯誤")
+        elif isinstance(error.commands.errors.CommandNotFound):
+            await ctx.send("沒有這指令!")
+        else:
+            await ctx.send("發生錯誤")
+
+
+
 
 def setup(bot):
     bot.add_cog(Event(bot))
